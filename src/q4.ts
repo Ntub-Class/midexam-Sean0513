@@ -5,11 +5,27 @@
 // 提示: String.includes, String.split
 
 
-let calc = function (calcString: string) {
 
+let calc = function (calcString: string) {
+    if (calcString.includes("+")){
+        let numStr : string[] = (calcString.split("+"));
+        console.log((+numStr[0]) + (+numStr[1]));
+    }
+    else if (calcString.includes("-")){
+        let numStr : string[] = (calcString.split("-"));
+        console.log((+numStr[0]) - (+numStr[1]));
+    }
+    else if (calcString.includes("*")){
+        let numStr : string[] = (calcString.split("*"));
+        console.log((+numStr[0]) * (+numStr[1]));
+    }
+    else if (calcString.includes("/")){
+        let numStr : string[] = (calcString.split("/"));
+        console.log((+numStr[0]) / (+numStr[1]));
+    }
 }
 
-calc('8*2')
-calc('1+1')
-calc('5/5')
+ calc('8*2')
+ calc('1+1')
+ calc('5/5')
 calc('9-1')
